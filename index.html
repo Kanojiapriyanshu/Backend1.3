@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <div class="hero">
+         <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <img src="fb.png">
+                <img src="tw.png">
+                <img src="gp.png">
+             </div>
+             <form action="http://127.0.0.1:2000/process_login"
+             method="GET" id="login" class="input-group">
+                <!-- <input type="type"  class="input-field" placeholder="Username" name= "Username" required> -->
+                <input type="text" class="input-field" placeholder="Username" name="Username" required>
+                <input type="password" class="input-field" placeholder="Password" name="Password" required>
+                <input type="checkbox" class="checkbox"><span>Remenber Password</span>
+                <button type="submit" class="submit-btn">Login</button>
+             </form>
+             <form action="http://127.0.0.1:2000/process_Registration" method="GET" id="register" class="input-group">
+                <input type="text" name="Username" class="input-field" placeholder="Username" name= "Username" required>
+                <input type="email" name="Email" class="input-field" placeholder="Email_Id" name="Email" required>
+                <input type="Password" name="Password" class="input-field" placeholder="Password" name="Password" required>
+                <input type="checkbox" class="checkbox"><span>I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">Register</button>
+             </form>
+         </div>
+
+    </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left ="110px"
+        }
+        function login
+        (){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left ="0px"
+        }
+    </script>
+</body>
+</html>
